@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lab3-2 Trushchak</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Trushchak Olha">
+<meta name="description" content="lab 3 flexbox Trushchak">
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+        font-family: sans-serif;
+        text-align: center;
+    }
+    .flex-container {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .flex-container2 {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        width: 75%;
+        height: 90%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    html, body {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .header {
+        background-color: deepskyblue;
+        width: 100%;
+        height: 11.1%;
+        align-self: flex-start;
+    }
+    .footer {
+        background-color: lightsalmon;
+        width: 75%;
+        height: 10%;
+        align-self: flex-end;
+    }
+    .left {
+        background-color: palegreen;
+        width: 25%;
+        height: 90%;
+    }
+    .cent {
+        background-color: khaki;
+        width: 66.67%;
+        height: 90%;
+        align-self: flex-start;
+    }
+    .rigth {
+        background-color:mediumorchid;
+        width: 33.3%;
+        height: 100%;
+    }
+    div {
+        padding: 20px;
+    }
+
+</style>
+
+<body>
+    <div class="flex-container">
+        <div class="left">IMG1</div>
+        <div class="flex-container2">
+            <div class="header">TEXT1</div>
+            <div class="cent">IMG2</div>
+            <div class="rigth">TEXT2</div>
+        </div>
+        <div class="footer">TEXT3</div>
+    </div>
+</body>
+</html>
