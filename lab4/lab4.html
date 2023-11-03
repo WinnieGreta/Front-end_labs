@@ -83,24 +83,27 @@
         </p>
     </div>
     <script>
+        
         function changeColor1() {
-            if (document.getElementById("first").style.color != "magenta") {
-                document.getElementById("first").style.color = "magenta";
-                document.getElementById("first").style.backgroundColor = "purple";
+            var change1 = document.getElementById("first");
+            if (change1.style.color != "magenta") {
+                change1.style.color = "magenta";
+                change1.style.backgroundColor = "purple";
             } else {
-                document.getElementById("first").style.color = "green";
-                document.getElementById("first").style.backgroundColor = "lime";
+                change1.style.color = "green";
+                change1.style.backgroundColor = "lime";
             }
         }
 
         function changeColor2()
         {
-            if (document.querySelector(".second").style.color != "red") {
-                document.querySelector(".second").style.color = "red";
-                document.querySelector(".second").style.backgroundColor = "maroon";
+            var change2 = document.querySelector(".second");
+            if (change2.style.color != "red") {
+                change2.style.color = "red";
+                change2.style.backgroundColor = "maroon";
             } else {
-                document.querySelector(".second").style.color = "navy";
-                document.querySelector(".second").style.backgroundColor = "gold";
+                change2.style.color = "navy";
+                change2.style.backgroundColor = "gold";
             }
         }
     </script>
