@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lab4 Trushchak</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Trushchak Olha">
+<meta name="description" content="lab 4 Trushchak">
+</head>
+
+<body>
+    <h2>Трущак Ольга Ігорівна</h2>
+
+    <div>
+        Дата та місце народження:
+        <ul>
+            <li>
+                23 липня 1996 р., м. Тернопіль
+            </li>
+        </ul>
+    </div>
+    
+    <div>
+        Освіта:
+        <ul>
+            <li>
+                Львівський фізико-математичний ліцей-інтернат при Львівському національному університеті імені Івана Франка - повна загальна середня освіта
+            </li>
+            <li>
+                Національний університет «Києво-Могилянська академія» - незакінчена вища освіта
+            </li>
+            <li id="first" onclick="changeColor1()">
+                Національний технічний університет України «Київський політехнічний інститут імені Ігоря Сікорського» - незакінчена вища освіта
+            </li>
+        </ul>
+    </div>
+    
+    <div class="second" onclick="changeColor2()">
+        Хобі:
+        <ul>
+            <li>
+                Відеоігри
+            </li>
+            <li>
+                Читання
+            </li>
+            <li>
+                Картини по номерах
+            </li>
+        </ul>
+    </div>    
+        
+    <div>
+        Улюблені книги:
+        <ol>
+            <li>
+                Террі Пратчет "Правда"
+            </li>
+            <li>
+                Тімоті Снайдер "Шлях до несвободи: росія, Європа, Америка"
+            </li>
+            <li>
+                Іван Багряний "Сад Гетсиманський"
+            </li>
+        </ol>
+    </div>
+       
+    <div>
+        <p>
+            На жаль, коли я планувала поїздку Європою у 2017 році, мені і на думку не спадало, що Гданськ справить на мене таке сильне враження. 
+            Мені вдалось провести там близько 12 годин, вночі, і це було казково. Я практично нічого не встигла побачити, окрім невеликого шматочка
+             міста навколо мого хостелу, який обійшла вздовж і впоперек. Мені здавалось, що коли я доповзла до колеса огляду, воно вже було 
+             закритим, але якимось чином серед фотографій знайшовся знімок з великої висоти. Я б хотіла повернутися в Гданськ знову, цільово,
+             а не як у проміжний пункт і, цього разу, насолодитися цим містом у всій його красі.
+        </p>
+    </div>
+    <div id="imgContainer">
+        <img src="https://www.poland.travel/images/en-EN/cities/Gdansk/Gdanskkategoria.jpg" alt="Official" width="60%">
+    </div>
+
+    <div>
+        <button type="button" onclick="appendImg()">Додати</button>
+        <button type="button" onclick="zoomIn()">Збільшити</button>
+        <button type="button" onclick="zoomOut()">Зменшити</button>
+        <button type="button" onclick="popImg()">Видалити</button>
+    </div>
+
+
+    <script>
+        
+        function changeColor1() {
+            var change1 = document.getElementById("first");
+            if (change1.style.color != "magenta") {
+                change1.style.color = "magenta";
+                change1.style.backgroundColor = "purple";
+            } else {
+                change1.style.color = "green";
+                change1.style.backgroundColor = "lime";
+            }
+        }
+
+        function changeColor2()
+        {
+            var change2 = document.querySelector(".second");
+            if (change2.style.color != "red") {
+                change2.style.color = "red";
+                change2.style.backgroundColor = "maroon";
+            } else {
+                change2.style.color = "navy";
+                change2.style.backgroundColor = "gold";
+            }
+        }
+
+        function zoomIn() {
+            var picAll = document.getElementsByTagName("img");
+            var pic = picAll[picAll.length-1]
+            var currentHeight = pic.clientHeight;
+            pic.style.height = currentHeight * 1.25 + "px";
+            var currentWidth = pic.clientWidth;
+            pic.style.width = currentWidth * 1.25 + "px";
+        }
+
+        function zoomOut() {
+            var picAll = document.getElementsByTagName("img");
+            var pic = picAll[picAll.length-1]
+            var currentHeight = pic.clientHeight;
+            pic.style.height = currentHeight * 0.75 + "px";
+            var currentWidth = pic.clientWidth;
+            pic.style.width = currentWidth * 0.75 + "px";
+        }
+
+        function appendImg() {
+            document.getElementById("imgContainer").innerHTML += '<img src="https://www.poland.travel/images/en-EN/cities/Gdansk/Gdanskkategoria.jpg" alt="Official" width="60%">';
+        }
+
+        function popImg() {
+            var picAll = document.getElementsByTagName("img");
+            var pic = picAll[picAll.length-1]
+            pic.remove();
+        }
+    </script>
+</body>
+</html>
