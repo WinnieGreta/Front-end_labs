@@ -73,15 +73,19 @@
              закритим, але якимось чином серед фотографій знайшовся знімок з великої висоти. Я б хотіла повернутися в Гданськ знову, цільово,
              а не як у проміжний пункт і, цього разу, насолодитися цим містом у всій його красі.
         </p>
-        <p>
-            <figure>
-                <a href="https://www.poland.travel/images/en-EN/cities/Gdansk/Gdanskkategoria.jpg">
-                    <img src="https://www.poland.travel/images/en-EN/cities/Gdansk/Gdanskkategoria.jpg" alt="Official" style="width: 80%">
-                </a>
-                <figcaption>Фото з <a href="https://www.poland.travel/en/cities/gdansk-and-tricity">Польської організації туризму</a></figcaption>
-            </figure>
-        </p>
     </div>
+    <div id="imgContainer">
+        <img src="https://www.poland.travel/images/en-EN/cities/Gdansk/Gdanskkategoria.jpg" alt="Official" width="60%">
+    </div>
+
+    <div>
+        <button type="button" onclick="appendImg()">Додати</button>
+        <button type="button" onclick="zoomIn()">Збільшити</button>
+        <button type="button" onclick="zoomOut()">Зменшити</button>
+        <button type="button" onclick="popImg()">Видалити</button>
+    </div>
+
+
     <script>
         
         function changeColor1() {
@@ -105,6 +109,34 @@
                 change2.style.color = "navy";
                 change2.style.backgroundColor = "gold";
             }
+        }
+
+        function zoomIn() {
+            var picAll = document.getElementsByTagName("img");
+            var pic = picAll[picAll.length-1]
+            var currentHeight = pic.clientHeight;
+            pic.style.height = currentHeight * 1.25 + "px";
+            var currentWidth = pic.clientWidth;
+            pic.style.width = currentWidth * 1.25 + "px";
+        }
+
+        function zoomOut() {
+            var picAll = document.getElementsByTagName("img");
+            var pic = picAll[picAll.length-1]
+            var currentHeight = pic.clientHeight;
+            pic.style.height = currentHeight * 0.75 + "px";
+            var currentWidth = pic.clientWidth;
+            pic.style.width = currentWidth * 0.75 + "px";
+        }
+
+        function appendImg() {
+            document.getElementById("imgContainer").innerHTML += '<img src="https://www.poland.travel/images/en-EN/cities/Gdansk/Gdanskkategoria.jpg" alt="Official" width="60%">';
+        }
+
+        function popImg() {
+            var picAll = document.getElementsByTagName("img");
+            var pic = picAll[picAll.length-1]
+            pic.remove();
         }
     </script>
 </body>
