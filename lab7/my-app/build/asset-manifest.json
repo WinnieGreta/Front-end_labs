@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Front-end_labs/lab7/my-app/build/static/css/main.e6c13ad2.css",
+    "main.js": "/Front-end_labs/lab7/my-app/build/static/js/main.82f141d1.js",
+    "index.html": "/Front-end_labs/lab7/my-app/build/index.html",
+    "main.e6c13ad2.css.map": "/Front-end_labs/lab7/my-app/build/static/css/main.e6c13ad2.css.map",
+    "main.82f141d1.js.map": "/Front-end_labs/lab7/my-app/build/static/js/main.82f141d1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.82f141d1.js"
+  ]
+}
