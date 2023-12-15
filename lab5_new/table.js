@@ -39,10 +39,6 @@ function changeOnDblclick(x) {
             //cells[i].style.backgroundColor = '#000000';
             cells[i].style.backgroundColor = nextColor;
         }
-        /*if (i >= 4) {
-            cells[i].innerHTML = '99';
-        }
-        cells[i].style.backgroundColor = "#0000ff";*/
     }
 }
 //&& (parseInt(cells[i].innerText) - parseInt(x.innerText)) % 2 === 0
