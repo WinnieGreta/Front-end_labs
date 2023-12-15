@@ -23,10 +23,10 @@ function getUsers() {
             //pictures[1].src = data.results[1].picture.large;
             for (let i = 0; i < pictures.length; i++) {
                 pictures[i].src = data.results[i].picture.large;
-                cities[i].innerText += data.results[i].location.city;
-                postcodes[i].innerText += data.results[i].location.postcode;
-                phones[i].innerText += data.results[i].phone;
-                names[i].innerText += data.results[i].name.first + " " + data.results[i].name.last;
+                cities[i].innerText = "City: " + data.results[i].location.city;
+                postcodes[i].innerText = "Postcode: " + data.results[i].location.postcode;
+                phones[i].innerText = "Phone: " + data.results[i].phone;
+                names[i].innerText = "Name: " + data.results[i].name.first + " " + data.results[i].name.last;
             }
         });
 }
